@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>TAP-Profile</title>
+
+    <!--Bootstarp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+
+    <% include ./templates/header %>
+
+    <main class="row">
+        <div id="container" class="col-sm-12 col-md-10 row">
+            <% if(user){ %>
+                <div class="thread-form col-lg-8">
+                    <form action="">
+                        <h4>Title:</h4>
+                        <input type="text" class="form-control">
+                        <br>
+                        <h4>Description:</h4>
+                        <textarea class="form-control" rows="5"></textarea>
+                        <br>
+                        <button type="button" class="btn btn-primary">Post</button>
+                    </form>
+                </div>
+            <% }else{ %>
+                <h2>Please sign in to post, on the forum</h2>
+            <% } %>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

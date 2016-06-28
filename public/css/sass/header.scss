@@ -1,0 +1,117 @@
+@import 'vars';
+
+header{
+    background: $main-color;
+    color:$text-color;
+
+    .nav{
+        width:80%;
+        margin: 0 auto;
+        display: inline;
+
+        .logo-container{
+            img{
+                max-width: 3.5em;
+                max-height: 3.5em;
+            }
+
+            a{
+                text-decoration: none;
+                color: $text-color;
+
+                h2{
+                    font-weight: bold;
+                    margin:.5em 0;
+                    padding:.5em;
+                    display: inline-block;
+                    min-width: 11em;
+                }
+            }
+        }
+
+        @media(max-width: 1200px){
+            .logo-container{
+                text-align: center;
+            }
+        }
+
+
+        ul{
+            list-style: none;
+
+            li{
+                display: inline-block;
+                margin-top: .5em;
+
+                a{
+                    text-decoration: none;
+                    display:inline-block;
+                    padding:.5em .5em;
+                    color:$text-color;
+                }
+                a:hover{
+                    color: $signup-color-lv2;
+                }
+
+                a.no-color:hover{
+                    color: $text-color;
+                }
+
+                //Signup/Login Buttons
+                .signup-btn{
+                    background: $signup-color;
+                    font-weight: bold;
+                    border-radius: .2em;
+                    padding: .7em;
+                    color:$text-color;
+                }
+                .signup-btn:hover{
+                    background: $signup-color-lv2;
+                    color: $text-color;
+                }
+
+                .logout-btn{
+                    background: $logout-color;
+                    font-weight: bold;
+                    border-radius: .2em;
+                    padding: .7em;
+                }
+                .logout-btn:hover{
+                    background: $logout-color-lv2;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+
+    //Dropdown Menu
+    .dropdown{
+        display: inline-block;
+        width: 12em;
+    }
+
+    .dropdown-menu{
+        margin:0;
+        background: $main-color;
+        width: 100%;
+
+        li.dropdown-item{
+            width: 100%;
+            margin: 0;
+
+            a{
+                background: $main-color;
+                width: 100%;
+            }
+
+            a:hover{
+                background: $main-color-lv2;
+            }
+        }
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

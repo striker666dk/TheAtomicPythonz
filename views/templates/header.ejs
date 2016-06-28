@@ -1,0 +1,46 @@
+<header>
+    <div class="nav row">
+        <div class="logo-container col-sm-12 col-md-5">
+            <a href="/">
+                <img src="/img/Snake-Small-No-Outline.png"
+                    onmouseover="this.src='/img/Snake-Small-No-Outline-green.png'"
+                    onmouseout="this.src='/img/Snake-Small-No-Outline.png'">
+                <h2>The Atomic Pythonz</h2>
+            </a>
+        </div>
+
+        <div class="col-sm-12 col-md-7">
+            <ul class="pull-right">
+                <li><a href="/servers" class="color-link">
+                        <h3>Servers</h3>
+                </a></li>
+
+                <li><a href="/forum" class="color-link">
+                    <h3>Forum</h3>
+                </a></li>
+
+                <% if(!user){ %>
+                <li><a href="/auth/steam">
+                    <h4 class="signup-btn" class="no-color">Sign in through Steam</h4>
+                </a></li>
+                <% }else{ %>
+                    <% if(user.rank > 0){ %>
+                        <!--Admin Menu-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#">
+                                <h3>Admin Menu <span class="caret"></h3></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="/"><h4>Add new forum</h4></a></li>
+                                <li class="dropdown-item"><a href="/"><h4>User options</h4></a></li>
+                            </ul>
+                        </li>
+                    <% } %>
+                    <li><a href="/profile" class="color-link"><h3><%= user.steam.displayName %></h3></a></li>
+                    <li><a href="/logout" class="no-color"><h4 class="logout-btn">Logout</h4></a></li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+</header>

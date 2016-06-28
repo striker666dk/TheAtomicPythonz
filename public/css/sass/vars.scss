@@ -1,0 +1,11 @@
+$main-color: #222222;
+$main-color-lv2: lighten($main-color, 10%);
+$main-color-lv3: lighten($main-color, 15%);
+
+$signup-color: #1fa82c;
+$signup-color-lv2: lighten($signup-color, 10%);
+
+$logout-color: #a81f1f;
+$logout-color-lv2: lighten($logout-color, 10%);
+
+$text-color:#ffffff;
